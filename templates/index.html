@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sauvons notre lagune</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script src="static/js/script.js" defer></script>
+    
+    
+
+
+</head>
+<style>
+    :root {
+        --primary-color: #2b7a78;
+        --secondary-color: #17252a;
+        --background-color: #f4f4f4;
+        --text-color: #555;
+        --highlight-color: #ff6600; /* Couleur pour attirer l'attention */
+        --text-emphasis: #000;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        font-family: Arial, sans-serif;
+        color: var(--text-color);
+        line-height: 1.6;
+    }
+    
+    body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+    
+    header {
+        background: #2b7a78;
+        color: #fff;
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    header p {
+        font-size: 1.3rem;
+        margin-top: 0.5rem;
+        --highlight-color: #ff6600; /* Couleur pour attirer l'attention */
+        --text-emphasis: #000;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: center;
+        background: var(--secondary-color);
+        padding: 1rem;
+        margin: 0;
+        list-style: none;
+    }
+    
+    nav ul li {
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    section {
+        padding: 2rem;
+        min-height: 100vh;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    section:nth-child(odd) {
+        background-color: #eaf8f8;
+    }
+    
+    section:nth-child(even) {
+        background-color: #ffffff;
+    }
+    
+    h2 {
+        color: #17252a;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 1rem;
+        background: #17252a;
+        color: #fff;
+    }
+    
+    button {
+        background-color: #2b7a78;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #17252a;
+    }
+    
+    blockquote {
+        font-size: 1.2rem;
+        color: #555;
+        font-style: italic;
+        margin: 20px auto;
+        text-align: center;
+    }
+    
+    nav {
+        background-color: #17252a;
+        padding: 1rem 0;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li a img {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+    
+    
+    nav ul li {
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        border-radius: 5px;
+    }
+    
+    nav ul li a:hover {
+        background-color: #2b7a78;
+        color: #ffffff;
+    }
+    
+    /* Transition effet cadre */
+    section:target {
+        background-color: #d1f2eb;
+        box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease;
+    }
+    
+    /* Transition effet cadre */
+    
+    #carousel {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        position: relative;
+    }
+    
+    #carousel img {
+        flex-shrink: 0;
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    
+    img {
+        max-width: 100%;
+        display: block;
+        margin: 1rem auto;
+        border-radius: 10px;
+    }
+    
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    
+    .gallery img {
+        width: calc(33% - 10px);
+        max-width: 300px;
+        border: 2px solid #ccc;
+        transition: transform 0.3s;
+    }
+    
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    #presse {
+    padding: 2rem;
+    background-color: #eaf8f8;
+}
+
+#presse h2 {
+    color: #17252a;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.article {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.article:hover {
+    transform: scale(1.05);
+}
+
+.article h3 {
+    font-size: 1.2rem;
+    color: #2b7a78;
+    margin: 0 0 0.5rem;
+}
+
+.article p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.highlight-text {
+    font-weight: bold; 
+    text-align: center; 
+    color: #2b7a78; 
+    font-size: 1.3rem; 
+    margin: 1rem auto; 
+}
+
+.highlight-text.important {
+    color: #ff6600; 
+    font-size: 1.5rem; 
+}
+
+.article a {
+    display: block;
+    margin-top: 1rem;
+    color: #2b7a78;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article a:hover {
+    text-decoration: underline;
+}
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slogans = [
+            "Sauvons notre patrimoine !",
+            "La lagune Ébrié, notre trésor en péril !",
+            "Agissons ensemble contre la pollution !",
+            "La nature a besoin de vous !",
+            "Unissons nos forces pour sauver la lagune !",
+            "Chaque geste compte : protégeons notre environnement !",
+            "Préservons notre lagune pour les générations futures !",
+            "La lagune est la vie, défendons-la !"
+        ];
+
+        let currentIndex = 0;
+
+        function showPopup(message) {
+            const popup = document.createElement('div');
+            popup.innerText = message;
+            popup.style.position = 'fixed';
+            popup.style.top = '20px';
+            popup.style.right = '20px';
+            popup.style.backgroundColor = '#17252a';
+            popup.style.color = '#fff';
+            popup.style.padding = '10px 20px';
+            popup.style.borderRadius = '5px';
+            popup.style.zIndex = '1000';
+            popup.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            document.body.appendChild(popup);
+
+            setTimeout(() => popup.remove(), 5000);
+        }
+
+        function startSlogansLoop() {
+            showPopup(slogans[currentIndex]);
+            currentIndex = (currentIndex + 1) % slogans.length; // Boucle infinie
+            setTimeout(startSlogansLoop, 7000);
+        }
+
+        startSlogansLoop(); // Démarre la boucle
+    });
+</script>
+
+<body>
+    <header>
+        <h1>Sauvons notre lagune!</h1>
+        <p>Ensemble, luttons contre le remblayage illicite, la pollution et la destruction de notre patrimoine naturel.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#remblayage">Remblayage Illicite</a></li>
+            <li><a href="#drainage">Drague et Drainage</a></li>
+            <li><a href="#pollution">Pollution</a></li>
+            <li><a href="#consequences">Conséquences</a></li>
+            <li><a href="#petition">Pétition</a></li>
+            <li><a href="#dons">Faire un Don</a></li>
+            <li><a href="#presse">Revue de Presse</a></li>
+            
+            
+        </ul>
+    </nav>
+
+    <main>
+        <div id="carousel">
+            <img src="static/images/pollution1.jpg" alt="Pollution plastique">
+            <img src="static\images\pollution2.jpg" alt="Hydrocarbures dans l’eau">
+            
+        </div>
+        
+        <section id="remblayage">
+            <h2>Remblayage Illicite</h2>
+            <p>La lagune Ébrié a perdu près de 34,6% de sa surface entre 2008 et 2023. Les acteurs impliqués bafouent les lois et mettent en danger l’équilibre écologique.</p>
+            <blockquote>« De Biétry jusqu’au port, ce sont des rivages de non-droit. » - Bernard Derrien</blockquote>
+            <img src="static\images\remblayage1.jpg" alt="Image montrant le remblayage illégal de la lagune près de Biétry">
+            <img src="static\images\remblayage2.jpg" alt="Impact du remblayage">
+        </section>
+
+        <section id="drainage">
+            <h2>Drague et Drainage</h2>
+            <p>Les dragages illégaux détruisent la faune aquatique, augmentent la profondeur des eaux et entraînent des érosions dangereuses. Cela affecte également la nappe phréatique.</p>
+            <blockquote>« Les dragages autour de la baie de Biétry ont causé une perte d’environ 194,96 hectares de lagune. »</blockquote>
+            <img src="static\images\drainage1.jpg" alt="Drague de la lagune">
+            <img src="static\images\drainage2.jpg" alt="Conséquences de la drague">
+        </section>
+
+        <section id="pollution">
+            <h2>Pollution</h2>
+            <p class="highlight-text centered">Chaque jour, près de 200 tonnes de déchets sont déversées dans la lagune.</p>
+            <blockquote>« La lagune est le symbole de la vie à Abidjan, mais elle est aujourd’hui étouffée par nos déchets. » - CIAPOL</blockquote>
+
+            <img src="static\images\pollution1.jpg" alt="Pollution plastique">
+
+            <img src="static\images\pollution2.jpg" alt="Hydrocarbures dans l’eau">
+
+
+        </section>
+
+        <section id="consequences">
+            <h2>Conséquences</h2>
+            <ul>
+                <li class="highlight-text">Destruction des écosystèmes marins.</li>
+                <li class="highlight-text">Réduction des ressources halieutiques.</li>
+                <li class="highlight-text">Risque accru de maladies liées à la pollution de l’eau.</li>
+                <li class="highlight-text">Appauvrissement de la biodiversité locale.</li>
+            </ul>
+        </section>
+
+        
+        <section id="petition">
+            <h2>Pétition</h2>
+            <p> <p class="highlight-text centered"> Rejoignez notre combat pour sauver la baie lagunaire!</p>
+            <section id="video-section">
+                <video controls autoplay loop width="100%">
+                    <source src="static\videos\Dragues_et_drainage2.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas les vidéos HTML5.
+                </video>
+            </section>
+
+            <blockquote>« La lagune Ébrié est un joyau naturel qui doit être protégé pour les générations futures. »</blockquote>
+            <p> <p class="highlight-text centered"> Signez la pétition et faites entendre votre voix !</p>
+            <form action="/sign" method="post">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Signer</button>
+            </form>
+        </section>
+
+        <section id="dons">
+            <h2>Faire un Don</h2>
+                <p> <p class="highlight-text centered"> Aidez-nous!</p>
+            <img src="static\images\pollution3.jpg" alt="Déchets solides">
+                <p> <p class="highlight-text centered"> Financons des actions concrètes pour la lagune!</p> 
+            <form action="/donate" method="post">
+                <label for="amount"> Montant (en FCFA) :</label>
+                <input type="number" id="amount" name="amount" required>
+                <button type="submit">Faire un don</button>
+            </form>
+        </section>
+        
+
+            <section id="video-section">
+                <video controls autoplay loop width="100%">
+                    <source src="static\videos\Drague_et_drainage.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas les vidéos HTML5.
+                </video>
+            </section>
+
+            <p> <p class="highlight-text centered"> </p>
+                <blockquote> "Ensemble, protégeons notre lagune : chaque don est une graine plantée pour un avenir durable." 🌍💙 </blockquote>
+            </p>
+        </section>
+
+        
+        <section id="presse">
+            <h2>Revue de Presse</h2>
+            <p>Découvrez les articles internationaux et africains traitant de la pollution de la lagune Ébrié.</p>
+            <div class="articles">
+                {% for article in articles %}
+                <div class="article">
+                    <h3>{{ article.title }}</h3>
+                    <p><strong>Source :</strong> {{ article.source }}</p>
+                    <p>{{ article.summary }}</p>
+                    <a href="{{ article.link }}" target="_blank">Lire l'article complet</a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sauvons notre lagune. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
