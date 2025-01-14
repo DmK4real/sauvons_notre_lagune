@@ -3,10 +3,11 @@ import os
 
 # Initialisation de l'application Flask
 app = Flask(
-    __name__,
-    template_folder=r'C:\Users\domin\sauvons_baie_lagunaire\templates',  # Chemin vers le dossier templates
-    static_folder=r'C:\Users\domin\sauvons_baie_lagunaire\static',       # Chemin vers le dossier static
+    __name__, 
+    template_folder="templates",  # Dossier des templates
+    static_folder="static"        # Dossier des fichiers statiques
 )
+
 
 # Données pour stocker les signatures et les dons
 signatures = []
