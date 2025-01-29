@@ -4,8 +4,8 @@ import os
 # Initialisation de l'application Flask
 app = Flask(
     __name__,
-    template_folder=r'C:\Users\domin\sauvons_baie_lagunaire\templates',  # Chemin vers le dossier templates
-    static_folder=r'C:\Users\domin\sauvons_baie_lagunaire\static',       # Chemin vers le dossier static
+    template_folder=r"Cbackend/templates",  # Chemin vers le dossier templates
+    static_folder=r'C:\Users\domin\sauvons_baie_lagunaire\static',# Chemin vers le dossier static
 )
 
 # Données pour stocker les signatures et les dons
