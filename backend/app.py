@@ -1,13 +1,18 @@
-from flask import Flask, render_template, request, jsonify
 import os
+from flask import Flask, render_template, request, jsonify
+# Initialisation de l'application Flask avec des chemins relatifs
+app = Flask(__name__, template_folder="templates", static_folder="static")
 
-# Initialisation de l'application Flask
-app = Flask(
-    __name__,
-    template_folder=r"C:\Users\domin\sauvons_baie_lagunaire\backend/templates",  # Chemin vers le dossier templates
-    static_folder=r'C:\Users\domin\sauvons_baie_lagunaire\static',# Chemin vers le dossier static
-)
+# Route principale
+@app.route('/')
+def home():
+    return render_template('index.html', articles=articles)
 
+if __name__ == '__main__':
+    # Vérifie si Flask trouve les fichiers correctement
+    print("Dossier de travail actuel :", os.getcwd())
+    print("Templates trouvés ici :", os.path.join(os.getcwd(), "templates"))
+    print("Static trouvé ici :", os.path.join(os.getcwd(), "static"))
 # Données pour stocker les signatures et les dons
 signatures = []
 donations = []
