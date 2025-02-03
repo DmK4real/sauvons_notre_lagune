@@ -3,11 +3,6 @@ from flask import Flask, render_template, request, jsonify
 # Initialisation de l'application Flask avec des chemins relatifs
 app = Flask(__name__, template_folder="templates", static_folder="static")
 
-# Route principale
-@app.route('/')
-def home():
-    return render_template('index.html', articles=articles)
-
 if __name__ == '__main__':
     # Vérifie si Flask trouve les fichiers correctement
     print("Dossier de travail actuel :", os.getcwd())
